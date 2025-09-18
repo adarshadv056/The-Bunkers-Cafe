@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+body {
+  font-family: cinzel, serif;
+}
+
+.hero_image {
+  display: none;
+}
+
+.hero {
+  background-image: url('/IMG/bg.png');
+  background-size: cover;
+  background-position: center;
+  /* height: 100vh; */
+  /* padding: 1px; */
+  margin-top: -85px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0b5d1e;
+  /* bunker green */
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 50px;
+  /* pill shape */
+  font-weight: bold;
+  font-family: monospace;
+  /* matches your example */
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: #084d18;
+  color: white;
+}
+
+/* Text part */
+.btn-text {
+  margin-right: 15px;
+  /* spacing before the circle */
+  margin-left: 10px;
+}
+
+/* Circle with arrow */
+.btn-icon {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 6px 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-dark-green {
+  background-color: #2B4232;
+  /* your bunker green */
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  height: 100px;
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-logo {
+  height: 100px;
+  vertical-align: middle;
+}
+
+.marquee-text {
+  font-size: 3.2rem;
+  font-weight: bold;
+  font-family: cinzel, serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.free_delivery {
+  position: absolute;
+  z-index: 1000;
+  margin-top: -170px;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .nav-item {
+    text-align: center;
+    /* center links on small screens */
+    margin: 5px 0;
+  }
+
+  .custom-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Navbar container */
+  .navbaba {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+  }
+
+  /* Logo */
+  .logo_main {
+    padding: 3px;
+    transition: transform 0.3s ease;
+  }
+
+  .logo_main:hover {
+    transform: scale(1.05);
+  }
+
+  /* Navbar links */
+  .navbar-nav .nav-link {
+    color: #333 !important;
+    font-size: 1rem;
+    margin: 0 12px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #2b4232ea !important;
+    /* golden hover */
+  }
+
+  /* Active link underline effect */
+  .navbar-nav .nav-link.active::after {
+    content: "";
+    display: block;
+    width: 40%;
+    margin: 3px auto 0 auto;
+    height: 2px;
+    background-color: #2b4232ea;
+    border-radius: 10px;
+  }
+
+  /* Toggle button */
+  .navbar-toggler {
+    border: none;
+    background: #2b4232ea;
+    border-radius: 8px;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-toggler:hover {
+    background: #2b4232ea;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+    /* make icon white */
+  }
+
+
+  .custom-btn:hover .btn-icon {
+    transform: translateX(4px);
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .txt {
+    font-size: 0.5rem !important;
+    padding: 15px !important;
+  }
+
+  .bunkertxt {
+    bottom: 10px !important;
+    margin: 0 20px !important;
+  }
+
+  .logo_main {
+    max-width: 80px !important;
+    margin-left: -15px !important;
+  }
+
+  .free_delivery {
+    height: 100px;
+    margin-top: -30px;
+  }
+
+  .navbaba {
+    height: 80px !important;
+    background-color: #084d18;
+  }
+
+  .navbar {
+    margin: 0 !important;
+    border-radius: 5px !important;
+    /* margin-bottom: 1px !important; */
+  }
+
+  .book_button {
+    display: none;
+  }
+
+  .hero {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .abc {
+    margin-top: 30px !important;
+  }
+
+  /* Collapsed menu background (mobile view) */
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2000;
+    /* 👈 Higher than your free delivery image */
+  }
+
+
+  /* Menu items in collapsed mode */
+  .navbar-collapse .nav-link {
+    display: block;
+    padding: 10px;
+    margin: 6px 0;
+    text-align: center;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .navbar-collapse .nav-link:hover {
+    background: #084d18;
+    color: #fff !important;
+  }
+
+}
